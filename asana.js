@@ -38,19 +38,28 @@ function GM_addStyle(css) {
 `);
 
     GM_addStyle(`
-.BoardCardWithCustomProperties { border-top: 1px solid #ccc; border-bottom: 1px solid transparent; box-shadow: none; border-radius: 0px; }
+.BoardCardWithCustomProperties { border-top: 0px solid #ccc; box-shadow: none; border-radius: 0px; margin-top: 1px; }
 .BoardColumnWithSortableTasks-sortableItemWrapper { padding-bottom: 0px; }
 .BoardCardCustomPropertyPreviewCell-cell { max-width: none; }
-.BoardCardWithCustomProperties-contents { padding: 10px; }
+.BoardCardWithCustomProperties-contents { padding: 10px; display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; }
 .BoardCardWithCustomProperties-name { font-size: 12px; }
 .BoardCardPotPills-potPill { width: 12px; }
+.BoardCardPotPills { order: 2; margin-bottom: 0px; flex-direction: column; margin-right: 4px; }
 .BoardCardWithCustomProperties-assignee, .BoardCardWithCustomProperties-dueDate { opacity: 1; }
+.BoardCardWithCustomProperties-nameAndDropdownButton { flex-basis: 100%; order: 0; flex-basis: 100%; }
+.BoardCardWithCustomProperties-metadata { order: 1; }
 
 .BoardCardWithCustomProperties, .BoardColumnScrollableContainer-cardsList { width: 100%; }
 .BoardBody-column { max-width: 300px; width: 300px; }
 
 .BoardCardWithCustomProperties-leftMetadata { display: flex; flex-direction: row; align-items: center; }
+.BoardCardWithCustomProperties-rightMetadata { display: none; }
 .BoardCardWithCustomProperties-customProperties { margin-top: 0px; margin-left: 10px; }
 
+.BoardColumn-dragHandle { float: left; width: calc(100% - 35px); margin-top: 10px; }
+.BoardAddCardButton { float: right; width: 30px; min-width: auto; }
+.BoardColumn { display: block; padding: 4px; }
+.BoardColumnScrollableContainer { clear: both; }
+.BoardBody-columnHorizontalScrollable { padding-top: 40px; background: #e8ecee; }
     `);
 })();
